@@ -29,7 +29,7 @@ if build_bar_graphic:  # se o botão for clicado
 
     # criar um gráfico de barras
     fig = px.bar(car_data, x='type', y='transmission',
-                 color='type', barmode='group')
+                 color='type')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
