@@ -6,8 +6,8 @@ car_data = pd.read_csv(
     r'C:\\Users\\Rafael\\Desktop\\Rafael\\Bootcamp\\Projects\\Bootcamp-Projects-Github\\Bootcamp-Project-Vehicles-App\\vehicles.csv')  # lendo os dados
 
 # filtro para os dados de vendas de carros
-columns_group = [price, model_year, model, condition, cylinders, fuel,
-                 odometer, transmission, type, paint_color, is_4wd, date_posted, days_listed]
+columns_group = ['price', 'model_year', 'model', 'condition', 'cylinders', 'fuel',
+                 'odometer', 'transmission', 'type', 'paint_color', 'is_4wd', 'date_posted', 'days_listed']
 
 hist_button = st.button('Criar histograma')  # criar um botão
 
