@@ -6,8 +6,6 @@ car_data = pd.read_csv(
     r'C:\\Users\\Rafael\\Desktop\\Rafael\\Bootcamp\\Projects\\Bootcamp-Projects-Github\\Bootcamp-Project-Vehicles-App\\vehicles.csv')  # lendo os dados
 
 # filtro para os dados de vendas de carros
-columns_group = ['price', 'model_year', 'model', 'condition', 'cylinders', 'fuel',
-                 'odometer', 'transmission', 'type', 'paint_color', 'is_4wd', 'date_posted', 'days_listed']
 
 hist_button = st.button('Criar histograma')  # criar um botão
 
@@ -17,7 +15,7 @@ if hist_button:  # se o botão for clicado
         'Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
 
     # criar um histograma
-    fig = px.histogram(car_data, columns_group)
+    fig = px.histogram(car_data, x="type")
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
@@ -30,7 +28,7 @@ if scatter_button:  # se o botão for clicado
         'Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
 
     # criar um gráfico de dispersão
-    fig = px.scatter(car_data, columns_group)
+    fig = px.scatter(car_data, x="odometer")
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
@@ -44,7 +42,7 @@ if build_bar_graphic:  # se o botão for clicado
         'Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
 
     # criar um gráfico de barras
-    fig = px.bar(car_data, columns_group)
+    fig = px.bar(car_data, x="odometer")
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
