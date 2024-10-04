@@ -31,7 +31,7 @@ if build_bar_graphic:  # se o botão for clicado
     count_per_year.columns = ['model_year', 'count']
 
     # criar um gráfico de barras
-    fig = px.bar(car_data, x=count_per_year)
+    fig = px.bar(car_data, x='model_year', y='count')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
