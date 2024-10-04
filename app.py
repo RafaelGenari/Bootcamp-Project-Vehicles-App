@@ -28,7 +28,7 @@ if build_bar_graphic:  # se o botão for clicado
         'Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
 
     # criar um gráfico de barras
-    fig = px.bar(car_data, x='condition', y='type')
+    fig = px.bar(car_data, x='type', y='condition', color='type')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
