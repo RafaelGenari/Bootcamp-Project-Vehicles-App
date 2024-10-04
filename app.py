@@ -27,7 +27,8 @@ if build_bar_graphic:  # se o botão for clicado
     st.write(
         'Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
 
-    count_per_year = car_data['model_year'].value_counts().sort_index()
+    count_per_year = car_data['model_year'].value_counts().reset_index()
+    count_per_year.columns = ['model_year', 'count']
 
     # criar um gráfico de barras
     fig = px.bar(car_data, x=count_per_year)
