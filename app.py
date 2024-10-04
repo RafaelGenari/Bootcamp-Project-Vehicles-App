@@ -8,7 +8,7 @@ car_data = pd.read_csv(
 tab1, tab2 = st.tabs(['Contagem dos tipos de carros', 'Condition x Price'])
 with tab1:
     # criar um histograma
-    fig = px.histogram(car_data, x="type")
+    fig = px.histogram(car_data, x='type')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
@@ -28,7 +28,7 @@ if build_bar_graphic:  # se o botão for clicado
         'Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
 
     # criar um gráfico de barras
-    fig = px.bar(car_data, x="odometer")
+    fig = px.bar(car_data, x='model_year', y='odometer')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
