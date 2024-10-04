@@ -17,7 +17,7 @@ if hist_button:  # se o botão for clicado
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
 
-scatter_button = st.button('Criar histograma')  # criar um botão
+scatter_button = st.button('Criar gráfico de dispersão')  # criar um botão
 
 if scatter_button:  # se o botão for clicado
     # escrever uma mensagem
