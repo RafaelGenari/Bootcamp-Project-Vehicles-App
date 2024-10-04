@@ -14,7 +14,7 @@ with tab1:
     st.plotly_chart(fig, use_container_width=True)
 with tab2:
     # criar um gráfico de dispersão
-    fig = px.scatter(car_data, x='odometer', y='condition')
+    fig = px.scatter(car_data, x='odometer', y='condition', color='type')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
@@ -28,7 +28,7 @@ if build_bar_graphic:  # se o botão for clicado
         'Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
 
     # criar um gráfico de barras
-    fig = px.bar(car_data, x='type', y='condition', color='type')
+    fig = px.bar(car_data, x='type', y='fuel', color='type', barmode='group')
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
